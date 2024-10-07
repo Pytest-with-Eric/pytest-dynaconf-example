@@ -1,0 +1,16 @@
+
+[default]
+DEBUG = true
+DATABASE_URL = "sqlite:///default.db"
+
+[development]
+DEBUG = true
+DATABASE_URL = "sqlite:///development.db"
+
+[testing]
+DEBUG = true
+DATABASE_URL = "sqlite:///testing.db"
+
+[production]
+DEBUG = false
+DATABASE_URL = "postgresql://user:pass@localhost/db"
