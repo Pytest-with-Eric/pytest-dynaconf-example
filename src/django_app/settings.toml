@@ -1,0 +1,26 @@
+[default]
+DEBUG = true
+SECRET_KEY = "default-secret-key"
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]              # Default allowed hosts
+DATABASES.default.ENGINE = "django.db.backends.sqlite3"
+DATABASES.default.NAME = "db.sqlite3"
+
+[development]
+DEBUG = true
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+[testing]
+DEBUG = false
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+[production]
+DEBUG = false
+ALLOWED_HOSTS = [
+    "your-production-domain.com",
+    "www.your-production-domain.com",
+] # Add your production domains
+DATABASES.default.ENGINE = "django.db.backends.postgresql"
+DATABASES.default.NAME = "prod_db"
+DATABASES.default.USER = "user"
+DATABASES.default.PASSWORD = "password"
+DATABASES.default.HOST = "localhost"

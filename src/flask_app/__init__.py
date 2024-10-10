@@ -1,16 +1,14 @@
 from flask import Flask
-from flask_app.config import init_app
 from flask_app.routes import main
+from dynaconf import FlaskDynaconf
 
 
 def create_app():
     """Create and configure the Flask app."""
     app = Flask(__name__)
 
-    # Initialize Dynaconf
-    init_app(app)
+    FlaskDynaconf(app)
 
-    # Register the routes
     app.register_blueprint(main)
 
     return app
