@@ -1,0 +1,19 @@
+[default]
+DEBUG = true
+DATABASE_URL = "sqlite:///default.db"
+SECRET_KEY = "default-secret-key"
+
+[development]
+DEBUG = true
+DATABASE_URL = "sqlite:///development.db"
+SECRET_KEY = "dev-secret-key"
+
+[testing]
+DEBUG = false
+DATABASE_URL = "sqlite:///testing.db"
+SECRET_KEY = "test-secret-key"
+
+[production]
+DEBUG = false
+DATABASE_URL = "postgresql://user:password@localhost/prod_db"
+SECRET_KEY = "prod-secret-key"
